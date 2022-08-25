@@ -7,4 +7,6 @@ java/1.8.0_181
 spark/2.3.0
 python3/3.6.5
 gatk/4.2.0.0
+bwa/0.7.17
 picard/2.25.7
+R/3.5.1
