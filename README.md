@@ -39,3 +39,9 @@ json=input.json
 export SINGULARITY_BINDPATH="/your/local/path"
 
 singularity exec $image bash /script/run.sh $json
+
+final_output_file:
+
+cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/subject1.final.split.vcf
+
+
