@@ -8,8 +8,6 @@ https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl
 
 singularity image:
 
-singularity pull --arch amd64 library://marchonion/remote-builds/rb-631395b1fe5ae46902d4cc55:latest
-
 wget https://www.dropbox.com/s/1rj8wejc5mpfjuc/MitoH3.sif
 
 
@@ -40,4 +38,4 @@ json=input.json
 
 export SINGULARITY_BINDPATH="/your/local/path"
 
-singularity exec $image bash /script/run $json
+singularity exec $image bash /script/run.sh $json
