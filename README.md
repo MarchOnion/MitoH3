@@ -1,6 +1,6 @@
 # MitoH3
 
-reference pipelieng:
+reference pipeline:
 
 https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl
 
