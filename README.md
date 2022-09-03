@@ -1,12 +1,12 @@
 # MitoH3
 
-https://www.dropbox.com/sh/rvjcf9wlvhlv9eo/AAB6ZYDeHZ7-IalmWGtA9jika?dl=0
-https://github.com/leklab/haplocheckCLI
 
-java/1.8.0_181
-spark/2.3.0
-python3/3.6.5
-gatk/4.2.0.0
-bwa/0.7.17
-picard/2.25.7
-R/3.5.1
+singularity image:
+
+singularity pull --arch amd64 library://marchonion/remote-builds/rb-631395b1fe5ae46902d4cc55:latest
+
+reference file:
+
+json file:
+
+cmd:
