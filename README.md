@@ -5,8 +5,9 @@
 https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl
 
 
+## prepare files:
 
-### singularity definiation file and image:
+### singularity definition file and image:
 wget https://www.dropbox.com/s/ufiykz549wyxhfn/MitoH3.def?dl=0
 
 wget https://www.dropbox.com/s/h8bs5o4pfbp52o9/MitoH3.sif?dl=0
@@ -31,7 +32,8 @@ wget https://www.dropbox.com/s/7ox0bwddmbiash0/subject1.cram
 wget https://www.dropbox.com/s/s6t0videh3wddnw/subject1.cram.crai
 
 
-
+### json file:
+check above
 
 ## run step1:
 
