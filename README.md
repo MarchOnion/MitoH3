@@ -33,7 +33,7 @@ wget https://www.dropbox.com/s/s6t0videh3wddnw/subject1.cram.crai
 
 
 
-## run part1:
+## run step1:
 
 image=MitoH3.sif
 
@@ -43,9 +43,21 @@ export SINGULARITY_BINDPATH="/your/local/path"
 
 singularity exec $image bash /script/run.sh $json
 
-final_output_file:
-
+##### final output vcf file:
 cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/subject1.final.split.vcf
 
-## run part2 
+## run step2:
 
+image=MitoH3.sif
+
+export SINGULARITY_BINDPATH="/your/local/path"
+
+singularity exec $image  bash   part2_rule_5_95_convert.sh   subject1.final.split.vcf  prefix
+
+##### output files:
+prefix.haplocheck.output  
+prefix.pass.het.vcf.gz.tbi  
+prefix.pass.homo.vcf.gz.tbi
+prefix.pass.het.vcf.gz    
+prefix.pass.homo.vcf.gz     
+prefix.pass.vcf.gz
