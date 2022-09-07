@@ -27,9 +27,6 @@ wget https://www.dropbox.com/s/1vfqwo84b70wva9/MT_WDL_ref.zip
 
 ### cram file example:
 
-wget https://www.dropbox.com/s/7ox0bwddmbiash0/subject1.cram
-
-wget https://www.dropbox.com/s/s6t0videh3wddnw/subject1.cram.crai
 
 
 ### json file:
