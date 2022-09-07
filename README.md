@@ -1,5 +1,9 @@
 # MitoH3
 
+## Introduction:
+
+MitoH3 is a pipeline that calls MT variants from sequence file (cram file). In addition to the regular MT reference sequence file, the pipeline also applied a shifted MT reference file to get calls at D-loop region more precisely. There are two main steps of the pipeline: #1 Generate raw vcf file from cram file. #2 Call haplogroup from cleaned vcf file; Split raw vcf file into homoplasmic call vcf and heteroplasmic call vcf.
+
 ## reference pipeline:
 
 https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl
