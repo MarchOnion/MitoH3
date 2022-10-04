@@ -17,7 +17,7 @@ https://console.cloud.google.com/storage/browser/genomics-public-data/references
 
 or download from dropbox
 
-wget https://www.dropbox.com/s/1vfqwo84b70wva9/MT_WDL_ref.zip
+wget https://www.dropbox.com/s/4u1mz7h7ws1z89k/MT_WDL_ref.zip
 
 
 
