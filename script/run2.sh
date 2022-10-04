@@ -2,9 +2,8 @@
 
 infile=$1
 tag=$2
-
-down=0.05
-up=0.95
+down=$3  #eg. 0.05
+up=$4    #eg. 0.95
 
 
 
