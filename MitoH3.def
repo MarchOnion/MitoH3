@@ -1,0 +1,57 @@
+Bootstrap: library
+From: ubuntu:18.04
+Stage: build
+
+%environment
+export TZ=Asia/Dubai
+
+%post
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+apt-get update -qq &&  apt-get install -y  wget unzip make gcc zlib1g-dev libcurl4-nss-dev  python3 default-jdk r-base
+
+ln -s /usr/bin/python3 /usr/bin/python
+
+#wget http://archive.ubuntu.com/ubuntu/pool/universe/r/r-base/r-base-core_3.4.4-1ubuntu1_amd64.deb
+#dpkg -i r-base-core_3.4.4-1ubuntu1_amd64.deb
+
+#wget http://archive.ubuntu.com/ubuntu/pool/universe/r/r-base/r-base_3.4.4-1ubuntu1_all.deb
+#dpkg -i r-base_3.4.4-1ubuntu1_all.deb 
+
+wget https://github.com/broadinstitute/gatk/releases/download/4.2.0.0/gatk-4.2.0.0.zip
+unzip gatk-4.2.0.0.zip
+rm gatk-4.2.0.0.zip
+
+wget --no-check-certificate --content-disposition https://github.com/leklab/haplocheckCLI/archive/master.zip
+unzip haplocheckCLI-master.zip
+mv haplocheckCLI-master haplocheckCLI
+rm haplocheckCLI-master.zip
+
+wget https://github.com/broadinstitute/picard/releases/download/2.25.7/picard.jar
+
+wget https://github.com/broadinstitute/cromwell/releases/download/36/cromwell-36.jar 
+
+wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.17.tar.bz2
+bunzip2 bwa-0.7.17.tar.bz2
+tar xvf bwa-0.7.17.tar
+cd bwa-0.7.17
+make
+cd /
+
+wget https://github.com/samtools/bcftools/releases/download/1.16/bcftools-1.16.tar.bz2
+bunzip2 bcftools-1.16.tar.bz2
+tar xvf bcftools-1.16.tar
+cd      bcftools-1.16
+make
+cd /
+
+wget https://github.com/samtools/htslib/releases/download/1.16/htslib-1.16.tar.bz2
+bunzip2 htslib-1.16.tar.bz2
+tar xvf htslib-1.16.tar
+cd      htslib-1.16
+make
+cd /
+
+wget https://www.dropbox.com/s/4h02qbkds72nr4n/script.zip
+unzip script.zip 
+
+mkdir /scratch
