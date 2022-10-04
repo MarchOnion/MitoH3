@@ -33,7 +33,7 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram.crai
 
 export SINGULARITY_BINDPATH="/your/local/path"
 
-singularity exec MitoH3.sif bash /script/run.sh input.json
+singularity exec MitoH3.sif bash /script/run1.sh input.json
 
 ##### final output vcf file:
 cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/subject1.final.split.vcf
@@ -44,7 +44,7 @@ cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution
 
 export SINGULARITY_BINDPATH="/your/local/path"
 
-singularity exec MitoH3.sif  bash   part2_rule_5_95_convert.sh   subject1.final.split.vcf  prefix
+singularity exec MitoH3.sif  bash   /script/run2.sh   subject1.final.split.vcf     prefix
 
 ##### output files:
 prefix.haplocheck.output  
