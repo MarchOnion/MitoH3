@@ -21,7 +21,6 @@ wget https://www.dropbox.com/s/1vfqwo84b70wva9/MT_WDL_ref.zip
 
 
 
-
 ### 1KG project cram file example:
 wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram
 
