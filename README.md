@@ -19,6 +19,8 @@ singularity build --remote MitoH3.sif MitoH3.def
 
 wget https://www.dropbox.com/s/4u1mz7h7ws1z89k/MT_WDL_ref.zip
 
+unzip MT_WDL_ref.zip
+
 original file: https://console.cloud.google.com/storage/browser/genomics-public-data/references/hg38/v0/chrM;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 
 
