@@ -34,7 +34,9 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram.crai
 ### prepare json file:
 wget https://raw.githubusercontent.com/MarchOnion/MitoH3/main/input.json
 
-cat input.json | sed 's/your_local_path//g' > local.input.json
+x=`pwd`
+
+sed -i "s|your_local_path|${x}|g" input.json 
 
 
 
