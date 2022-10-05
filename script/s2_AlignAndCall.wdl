@@ -1,6 +1,6 @@
 version 1.0
 
-import "script/s3_AlignmentPipeline.wdl" as AlignAndMarkDuplicates
+import "/script/s3_AlignmentPipeline.wdl" as AlignAndMarkDuplicates
 
 
 workflow AlignAndCall {
