@@ -34,28 +34,22 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram.crai
 ### prepare json file:
 wget https://raw.githubusercontent.com/MarchOnion/MitoH3/main/input.json
 
-x=`pwd`
+dir=`pwd`
 
-sed -i "s|your_local_path|${x}|g" input.json 
+sed -i "s|your_local_path|${dir}|g" input.json 
 
 
 
 ## run step1:
 
-export SINGULARITY_BINDPATH="/your/local/path"
-
-singularity exec   --bind "dir" MitoH3.sif bash /script/run1.sh input.json
-
-##### final output vcf file:
-cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/subject1.final.split.vcf
+singularity exec --bind "$dir" MitoH3.sif bash /script/run1.sh input.json
 
 
 
 ## run step2:
+step1_output=cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/*.final.split.vcf
 
-export SINGULARITY_BINDPATH="/your/local/path"
-
-singularity exec MitoH3.sif  bash   /script/run2.sh   subject1.final.split.vcf     prefix
+singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output    prefix
 
 ##### output files:
 prefix.haplocheck.output  
