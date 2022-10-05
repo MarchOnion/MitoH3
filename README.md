@@ -8,6 +8,9 @@ MitoH3 is a pipeline that calls MT variants from sequence file (cram file). In a
 ## prepare files:
 
 ### build singularity image using definition file:
+
+How to sign in: https://docs.sylabs.io/guides/latest/user-guide/signNverify.html#
+
 wget https://raw.githubusercontent.com/MarchOnion/MitoH3/main/MitoH3.def
 
 singularity build --remote MitoH3.sif MitoH3.def
