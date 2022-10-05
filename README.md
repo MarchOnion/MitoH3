@@ -53,8 +53,6 @@ singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output 
 
 
 
-## reference pipeline:
-
-https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl
+[reference pipeline](https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl)
 
 
