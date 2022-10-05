@@ -25,13 +25,16 @@ original file: https://console.cloud.google.com/storage/browser/genomics-public-
 
 
 
-
-
 ### 1KG project cram file example:
 wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram
 
 wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram.crai
 
+
+### prepare json file:
+wget https://raw.githubusercontent.com/MarchOnion/MitoH3/main/input.json
+
+cat input.json | sed 's/your_local_path//g' > local.input.json
 
 
 
@@ -39,7 +42,7 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988882/HG01433.final.cram.crai
 
 export SINGULARITY_BINDPATH="/your/local/path"
 
-singularity exec MitoH3.sif bash /script/run1.sh input.json
+singularity exec   --bind "dir" MitoH3.sif bash /script/run1.sh input.json
 
 ##### final output vcf file:
 cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/subject1.final.split.vcf
