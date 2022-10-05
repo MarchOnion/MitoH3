@@ -41,16 +41,17 @@ sed -i "s|your_local_path|${dir}|g" input.json
 
 
 ## run step1:
-
+```bash
 singularity exec --bind "$dir" MitoH3.sif bash /script/run1.sh input.json
-
+```
 
 
 ## run step2:
+```bash
 step1_output=cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/*.final.split.vcf
 
 singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output    prefix  0.05 0.95
-
+```
 
 
 [reference pipeline](https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl)
