@@ -51,7 +51,9 @@ cd      htslib-1.16
 make
 cd /
 
-wget https://www.dropbox.com/s/4h02qbkds72nr4n/script.zip
-unzip script.zip 
-
-mkdir /scratch
+mkdir /script
+wget -O /script/run1.sh https://raw.githubusercontent.com/MarchOnion/MitoH3/main/script/run1.sh
+wget -O /script/run2.sh https://raw.githubusercontent.com/MarchOnion/MitoH3/main/script/run2.sh
+wget -O /script/s1_MitochondriaPipeline.wdl  https://raw.githubusercontent.com/MarchOnion/MitoH3/main/script/s1_MitochondriaPipeline.wdl
+wget -O /script/s2_AlignAndCall.wdl      https://raw.githubusercontent.com/MarchOnion/MitoH3/main/script/s2_AlignAndCall.wdl
+wget -O /script/s3_AlignmentPipeline.wdl https://github.com/MarchOnion/MitoH3/blob/main/script/s3_AlignmentPipeline.wdl
