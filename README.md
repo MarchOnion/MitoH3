@@ -49,15 +49,7 @@ singularity exec --bind "$dir" MitoH3.sif bash /script/run1.sh input.json
 ## run step2:
 step1_output=cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSites/execution/*.final.split.vcf
 
-singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output    prefix
-
-##### output files:
-prefix.haplocheck.output  
-prefix.pass.het.vcf.gz.tbi  
-prefix.pass.homo.vcf.gz.tbi
-prefix.pass.het.vcf.gz    
-prefix.pass.homo.vcf.gz     
-prefix.pass.vcf.gz
+singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output    prefix  0.05 0.95
 
 
 
