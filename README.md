@@ -64,8 +64,11 @@ singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output 
 
 ### Supplementary 
 
-example script for merge vcf files is also provided.
+* example script for merge vcf files is also provided.
+```
+https://raw.githubusercontent.com/MarchOnion/MitoH3/main/merge_vcf_files.sh
+```
 
-[reference pipeline](https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl)
+* [reference pipeline](https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl)
 
 
