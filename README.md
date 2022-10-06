@@ -62,7 +62,10 @@ step1_output=cromwell-executions/MitochondriaPipeline/*/call-SplitMultiAllelicSi
 singularity exec --bind "$dir" MitoH3.sif  bash /script/run2.sh   $step1_output    prefix  0.05 0.95
 ```
 
-## reference
+### Supplementary 
+
+example script for merge vcf files is also provided.
+
 [reference pipeline](https://github.com/broadinstitute/gatk/tree/master/scripts/mitochondria_m2_wdl)
 
 
